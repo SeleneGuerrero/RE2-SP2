@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Juan",
+    "age": 30,
+    "country": "Mexico",
+    "id": 1
+  },
+  {
+    "name": "Karla",
+    "age": 26,
+    "country": "Canada",
+    "id": 2
+  },
+  {
+    "name": "Naomi",
+    "age": 32,
+    "country": "Japan",
+    "id": 3
+  },
+  {
+    "name": "Kie",
+    "age": 28,
+    "country": "Thailand",
+    "id": 4
+  },
+  {
+    "name": "Alexander",
+    "age": 31,
+    "country": "New Zeland",
+    "id": 5
+  }]
