@@ -1,36 +1,32 @@
 package org.example;
 
-//mportamos la librería OpenCSV que nos facilita escribir archivos CSV.
-//FileWriter → para crear archivos.
-//
-//IOException → errores al escribir.
-//
-//List → la lista de personas.
-import com.opencsv.CSVWriter; // Clase de OpenCSV
+import com.opencsv.CSVWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-
-//Creamos la clase CsvWriter. Clase encargada de escribir datos en un archivo CSV usando OpenCSV.
-
+/**
+ * Clase encargada de escribir datos en un archivo CSV usando la librería OpenCSV.
+ */
 public class CsvWriter {
 
-    //Definimos un metodo que recibe:
-    //
-    //filePath → ruta del archivo CSV de salida.
-    //
-    //personas → lista de personas a guardar.
+    /**
+     * Escribe una lista de objetos {@link People} en un archivo CSV.
+     *
+     * <p>El archivo CSV generado contendrá una cabecera con las columnas:
+     * <b>ID</b>, <b>Name</b>, <b>Age</b> y <b>Country</b>, seguidas de una fila por cada persona.</p>
+     *
+     * @param filePath Ruta del archivo CSV de salida.
+     * @param personas Lista de objetos {@link People} a escribir en el archivo.
+     */
     public void writeCsvFile(String filePath, List<People> personas) {
-        //Abrimos un CSVWriter (con FileWriter) para escribir en el archivo.
+        // Abrimos un CSVWriter (con FileWriter) para escribir en el archivo.
         try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
             // Creamos la cabecera del CSV (los títulos de columna).
-            //Cabecera
             String[] header = {"ID", "Name", "Age", "Country"};
             writer.writeNext(header);
 
-            //Recorremos la lista de personas y escribimos cada una como una fila de texto.
-            // Filas
+            // Recorremos la lista de personas y escribimos cada una como una fila de texto.
             for (People p : personas) {
                 String[] row = {
                         String.valueOf(p.getId()),
@@ -41,13 +37,12 @@ public class CsvWriter {
                 writer.writeNext(row);
             }
 
-            //Mostramos un mensaje en consola cuando se termina.
+            // Mostramos un mensaje en consola cuando se termina.
             System.out.println("Archivo CSV creado ");
 
-        //Capturamos errores si algo sale mal al guardar el archivo.
         } catch (IOException e) {
+            // Capturamos errores si algo sale mal al guardar el archivo.
             System.err.println("Error al escribir el archivo CSV: " + e.getMessage());
         }
     }
 }
-
