@@ -45,6 +45,8 @@ En tu `pom.xml` asegúrate de incluir:
     </dependency>
 </dependencies>
 
+
+
 ▶️ Ejecución
 
 El programa leerá los datos desde person.json.
@@ -55,11 +57,6 @@ Ejemplo de salida en consola:
 Archivo CSV creado
 
 
-📑 Generar Documentación JavaDoc
-Para generar la documentación en HTML:
-
-javadoc -d docs -sourcepath src/main/java -subpackages org.example
-Luego abre el archivo docs/index.html en tu navegador.
 
 👤 Autor
 Proyecto desarrollado como ejemplo educativo para la conversión de datos JSON → CSV en Java.
@@ -69,4 +66,4 @@ Proyecto desarrollado como ejemplo educativo para la conversión de datos JSON �
 📌 En este README:  
 - Dejé todo listo para que alguien pueda clonar, compilar y ejecutar.  
 - Incluí dependencias exactas de **Maven**.  
-- Puse la instrucción para generar **JavaDoc**.  
+  
