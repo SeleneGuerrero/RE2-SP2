@@ -9,9 +9,13 @@ Este proyecto permite **leer datos desde un archivo JSON** y **exportarlos a un 
 src/main/java/org/example/
 │
 ├── Main.java # Clase principal, ejecuta el flujo completo
+
 ├── People.java # Clase modelo que representa una persona
+
 ├── JsonReader.java # Clase para leer el JSON y convertirlo en objetos
+
 ├── CsvWriter.java # Clase para escribir los datos en CSV
+
 └── person.json # Archivo de entrada con los datos en formato JSON
 
 
